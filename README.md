@@ -9,9 +9,13 @@ Each line is in the format function [value]. ADD 5, for example, adds 5 to the c
 Following functions are supported:
 
 ADD n -- (addition, +)
+
 SUB n -- (subtraction, -)
+
 MUL n -- (multiplication, *)
+
 DIV n -- (division, /)
+
 SQR -- (square, ²)
 
 
