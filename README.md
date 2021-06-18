@@ -11,3 +11,7 @@ SUB n -- (subtraction, -)
 MUL n -- (multiplication, *)
 DIV n -- (division, /)
 SQR -- (square, ²)
+
+
+Autor:    Daniel Iftime
+Made for: app-concept.com GmbH | JobsNavi
