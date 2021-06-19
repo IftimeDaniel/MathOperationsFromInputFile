@@ -29,7 +29,7 @@ filePointer = fopen(argv[1], "r");  //Öffnet Datei die in Kommandozeile überge
   if(filePointer == NULL)
   {
     printf("Datei wurde nicht gefunden = %s\n", argv[1]);
-    return 1;
+    exit(EXIT_FAILURE);
   } //Datei nicht gefunden
 
 
