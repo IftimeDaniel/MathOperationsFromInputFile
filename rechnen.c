@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 
 FILE *filePointer;
 char buffer[10 + 1] = "";
-int wert = 0;
+double wert = 0;
 int i=0;
 
 filePointer = fopen(argv[1], "r");  //Öffnet Datei die in Kommandozeile übergeben wurde
@@ -106,7 +106,7 @@ if(i>=10){
 i++;
 }
 
-printf("%d \n",wert);
+printf("%f \n",wert);
 return (EXIT_SUCCESS);
 
 
