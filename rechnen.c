@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 
 
 FILE *filePointer;
-char buffer[10 + 1] = "";
+char operation[10 + 1] = "";
 double wert = 0;
 int i=0;
 
@@ -33,12 +33,12 @@ filePointer = fopen(argv[1], "r");  //Öffnet Datei die in Kommandozeile überge
   } //Datei nicht gefunden
 
 
-while(fgets(buffer, sizeof(buffer), filePointer) != NULL) //Schleife läuft so lange bis alle Zeilen eingelesen wurden
+while(fgets(operation, sizeof(operation), filePointer) != NULL) //Schleife läuft so lange bis alle Zeilen eingelesen wurden
 {
   //Falls Subtraktion gefunden wurde lies alle Zeichen in dieser Zeile
-  if(strncmp(buffer, "SUB", strlen("SUB")) == 0)
+  if(strncmp(operation, "SUB", strlen("SUB")) == 0)
   {
-  char *str = buffer, *b = str;
+  char *str = operation, *b = str;
   // Läuft solange Zeichen verarbeitet werden müssen
   while (*b)
   {
@@ -54,9 +54,9 @@ while(fgets(buffer, sizeof(buffer), filePointer) != NULL) //Schleife läuft so l
  }
 }
   //Addition
-  else if(strncmp(buffer, "ADD", strlen("ADD")) == 0)
+  else if(strncmp(operation, "ADD", strlen("ADD")) == 0)
   {
-  char *str = buffer, *b = str;
+  char *str = operation, *b = str;
   while (*b)
   {
    if ( isdigit(*b) || ( (*b=='-'||*b=='+') && isdigit(*(b+1)) ))
@@ -67,9 +67,9 @@ while(fgets(buffer, sizeof(buffer), filePointer) != NULL) //Schleife läuft so l
  }
 }
   //Multiplikation
-  else if(strncmp(buffer, "MUL", strlen("MUL")) == 0)
+  else if(strncmp(operation, "MUL", strlen("MUL")) == 0)
   {
-  char *str = buffer, *b = str;
+  char *str = operation, *b = str;
     while (*b)
     {
      if ( isdigit(*b) || ( (*b=='-'||*b=='+') && isdigit(*(b+1)) ))
@@ -80,9 +80,9 @@ while(fgets(buffer, sizeof(buffer), filePointer) != NULL) //Schleife läuft so l
    }
   }
   //Division
-  else if(strncmp(buffer, "DIV", strlen("DIV")) == 0)
+  else if(strncmp(operation, "DIV", strlen("DIV")) == 0)
   {
-  char *str = buffer, *b = str;
+  char *str = operation, *b = str;
     while (*b)
     {
      if ( isdigit(*b) || ( (*b=='-'||*b=='+') && isdigit(*(b+1)) ))
@@ -93,7 +93,7 @@ while(fgets(buffer, sizeof(buffer), filePointer) != NULL) //Schleife läuft so l
    }
   }
   //zum Quadrat (Hoch 2)
-  else if(strncmp(buffer, "SQR", strlen("SRQ")) == 0)
+  else if(strncmp(operation, "SQR", strlen("SRQ")) == 0)
   {
   wert = pow(wert,2);
   }
