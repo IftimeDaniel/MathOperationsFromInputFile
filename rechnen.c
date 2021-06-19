@@ -99,15 +99,13 @@ while(fgets(operation, sizeof(operation), filePointer) != NULL) //Schleife läuf
   }
 
 //Es können maximal 10 Zeilen gelesen werden
-if(i>=10){
+ if(i>=10){
   printf("Eine Datei darf Maximal 10 Zeilen enhalten \n");
   exit(EXIT_FAILURE);
-         }
-i++;
-}
+          }
+ i++;
+ }
 
-printf("%f \n",wert);
+printf("%g \n",wert);
 return (EXIT_SUCCESS);
-
-
 }
