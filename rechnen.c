@@ -85,7 +85,7 @@ while(fgets(buffer, sizeof(buffer), filePointer) != NULL) //Schleife läuft so l
   char *str = buffer, *b = str;
     while (*b)
     {
-     if ( isdigit(*b) || ( (*b=='-'||*b=='+') && isdigit(*(p+1)) ))
+     if ( isdigit(*b) || ( (*b=='-'||*b=='+') && isdigit(*(b+1)) ))
      {
       long nummer = strtol(b, &b, 10);
       wert /=nummer;
