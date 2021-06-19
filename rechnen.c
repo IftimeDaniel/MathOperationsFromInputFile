@@ -82,14 +82,14 @@ while(fgets(buffer, sizeof(buffer), filePointer) != NULL) //Schleife läuft so l
   //Division
   else if(strncmp(buffer, "DIV", strlen("DIV")) == 0)
   {
-  char *str = buffer, *p = str;
-    while (*p)
+  char *str = buffer, *b = str;
+    while (*b)
     {
-     if ( isdigit(*p) || ( (*p=='-'||*p=='+') && isdigit(*(p+1)) ))
+     if ( isdigit(*b) || ( (*b=='-'||*b=='+') && isdigit(*(p+1)) ))
      {
-      long nummer = strtol(p, &p, 10);
+      long nummer = strtol(b, &b, 10);
       wert /=nummer;
-      } else {p++;}
+      } else {b++;}
    }
   }
   //zum Quadrat (Hoch 2)
