@@ -21,4 +21,3 @@ SQR -- (square, ²)
 
 Autor:    Daniel Iftime
 
-Made for: app-concept.com GmbH | JobsNavi
